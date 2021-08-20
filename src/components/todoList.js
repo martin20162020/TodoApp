@@ -7,7 +7,7 @@ const ToDoList = ({ todos, onDeleteTodo, onEditTodo, auth}) => {
       todos.todos.map((todo) => (
         <div className="todo" key={todo.id}>
           <div className="authorAndItem">
-            <li className={`todo-item ${todo.completed ? "completed": ''}`}>{todo.completed ? `${todo.title} is completed`: todo.title }</li>
+            <li className={`${todo.completed ? "todo-item completed": 'todo-item'}`}>{todo.completed ? `${todo.title} is completed`: todo.title }</li>
             <h3 className="author">Posted By: {auth.name}</h3>
           </div>
 

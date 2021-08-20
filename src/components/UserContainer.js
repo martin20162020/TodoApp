@@ -31,7 +31,7 @@ const UserContainer = ({userData, fetchUsers, userTodos, fetchTodos}) => {
                         <div className="todo" key={userTodo.id}>
                             <div className="authorAnditem">
                                     <div>
-                                        <li className={`todo-item ${userTodo.completed ? "completed": ''}`}>{userTodo.title}</li>
+                                        <li className={`${userTodo.completed ? "todo-item completed": 'todo-item'}`}>{userTodo.title}</li>
                                         <h3 className="author">{`Posted By: ${userContainers[userTodo.id].username}`}</h3>
                                     </div>
                             </div>
