@@ -8,7 +8,7 @@ const Navigation = () => {
         <BrowserRouter>
         <Switch>
             <Route exact path='/' component={Welcome}/>
-            <Route exact path='https://create-a-list.herokuapp.com/homepage' component={App}/>
+            <Route exact path='/homepage' component={App}/>
         </Switch>
         </BrowserRouter>
     )
