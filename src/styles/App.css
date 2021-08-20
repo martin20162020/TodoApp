@@ -141,9 +141,7 @@ button:hover{
 }
 
 .completed{
-  opacity: 50%;
-  
-  
+  color: rgb(170, 2, 114);
 }
 
 .deleteItem{
