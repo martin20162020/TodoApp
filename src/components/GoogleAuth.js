@@ -35,7 +35,7 @@ const GoogleAuth =  ({dispatch, isSignedIn}) =>{
 
     const onSignInClick  = () => {
         auth.signIn().then(function (){
-            window.location.href = '/https://create-a-list.herokuapp.com/homepage'
+            window.location.href = 'https://create-a-list.herokuapp.com/homepage'
         })
         
       }
