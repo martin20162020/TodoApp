@@ -2,6 +2,10 @@
   "name": "todo-redux",
   "version": "0.1.0",
   "private": true,
+  "engines":{
+    "node": "16.6.2",
+    "npm": "7.20.3"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -18,8 +22,7 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
     "underscore": "^1.13.1",
-    "web-vitals": "^1.1.2",
-    "dot-env": "7.20.3"
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
