@@ -7,11 +7,11 @@ import { fetchTodos } from '../redux/usersTodos/userTodosActions';
 const UserContainer = ({userData, fetchUsers, userTodos, fetchTodos}) => {
     useEffect(()=>{
         fetchUsers()
-    }, [])
+    }, [fetchUsers])
 
     useEffect(()=>{
         fetchTodos()
-    }, [])
+    }, [fetchTodos])
 
     const userContainers = userData.users.map((user)=> user)
 

@@ -3,9 +3,7 @@ const SIGN_OUT = 'SIGN_OUT';
 
 const initial_State = {
     isSignedIn: null,
-    userId: null, 
-    name: '',
-
+    name: false,
 };
 
 export default (state = initial_State, action) =>{
@@ -14,22 +12,18 @@ export default (state = initial_State, action) =>{
             return {
                 ...state, 
                 isSignedIn: true,
-                userId: action.payload, 
-                name: window.gapi.auth2.getAuthInstance().currentUser.Td.Os.Ne              
+                name: action.payload        
             }
         case SIGN_OUT:
             return {
                 ...state,
                 isSignedIn: false,
-                userId: null,
                 name: ''
             }
         default:
             return state;
     }
 }
-
-
 
 export const signIn = (name) =>{
     return {

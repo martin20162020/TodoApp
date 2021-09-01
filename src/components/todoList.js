@@ -1,6 +1,7 @@
 import React from "react";
 
 const ToDoList = ({ todos, onDeleteTodo, onEditTodo, auth}) => {
+  {console.log(auth)}
     return (<div className="todo-container">
       <h2>{auth.name}'s ToDo List</h2>
     {todos.todos && todos.todos.length > 0 ? (
@@ -8,7 +9,7 @@ const ToDoList = ({ todos, onDeleteTodo, onEditTodo, auth}) => {
         <div className="todo" key={todo.id}>
           <div className="authorAndItem">
             <li className={`${todo.completed ? "todo-item completed": 'todo-item'}`}>{todo.completed ? `${todo.title} is completed`: todo.title }</li>
-            <h3 className="author">Posted By: {auth.name}</h3>
+            <h3 className="author"> Posted By: {auth.name ? `${auth.name}` : 'Fetching user...'}</h3>
           </div>
 
           <div>

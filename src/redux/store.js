@@ -1,4 +1,3 @@
-import individualReducer from './individualReducer';
 import { applyMiddleware, createStore, compose } from "redux";
 import { saveState, loadState } from "./localStorage";
 import thunk from "redux-thunk";

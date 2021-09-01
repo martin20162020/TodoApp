@@ -2,7 +2,7 @@
   "name": "todo-redux",
   "version": "0.1.0",
   "private": true,
-  "engines":{
+  "engines": {
     "node": "16.6.2",
     "npm": "7.20.3"
   },

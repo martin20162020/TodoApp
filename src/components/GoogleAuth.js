@@ -15,15 +15,20 @@ const GoogleAuth =  ({dispatch, isSignedIn}) =>{
         window.gapi.client.init(params).then(()=>{
             setAuth(window.gapi.auth2.getAuthInstance());
             onAuthChange(window.gapi.auth2.getAuthInstance().isSignedIn.get());
-            window.gapi.auth2.getAuthInstance().isSignedIn.listen(onAuthChange)    
+            window.gapi.auth2.getAuthInstance().isSignedIn.listen(onAuthChange)
+             
         })
     })
     }, []);
 
     const onAuthChange = isSignedIn =>{
         if (isSignedIn){
+            let userName = 
+                window.gapi.auth2.getAuthInstance().currentUser.get()
+                .getBasicProfile().getName()
             dispatch(
                 AuthorizationAction.signIn(
+                    userName
                 ),
             )
         } else {
@@ -66,7 +71,8 @@ const GoogleAuth =  ({dispatch, isSignedIn}) =>{
 }
 
 const mapStateToProps = state =>{
-    return {isSignedIn: state.auth.isSignedIn, 
+    return {
+        isSignedIn: state.auth.isSignedIn, 
         name: state.auth.name,
     }
 }
