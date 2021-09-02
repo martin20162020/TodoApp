@@ -1,9 +1,8 @@
 import React from "react";
 
 const ToDoList = ({ todos, onDeleteTodo, onEditTodo, auth}) => {
-  {console.log(auth)}
     return (<div className="todo-container">
-      <h2>{auth.name}'s ToDo List</h2>
+      <h2>{auth.isSignedIn === null ? 'Fetching your list...': `${auth.name}'s List`}</h2>
     {todos.todos && todos.todos.length > 0 ? (
       todos.todos.map((todo) => (
         <div className="todo" key={todo.id}>

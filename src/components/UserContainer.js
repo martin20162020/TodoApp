@@ -30,10 +30,12 @@ const UserContainer = ({userData, fetchUsers, userTodos, fetchTodos}) => {
                         
                         <div className="todo" key={userTodo.id}>
                             <div className="authorAnditem">
+                                {userContainers[userTodo.id] !== undefined ? 
                                     <div>
                                         <li className={`${userTodo.completed ? "todo-item completed": 'todo-item'}`}>{userTodo.title}</li>
                                         <h3 className="author">{`Posted By: ${userContainers[userTodo.id].username}`}</h3>
                                     </div>
+                                : 'fetching data...'}
                             </div>
                         </div>
                         )

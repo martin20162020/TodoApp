@@ -57,7 +57,7 @@ const GoogleAuth =  ({dispatch, isSignedIn}) =>{
         } else if (isSignedIn){
             return (
                 <div>
-                    <h1>{`Start creating your list`}</h1>
+                    <h1>Welcome! Let's start creating your to do list today.</h1>
                     <button id='googleButton' onClick={onSignOutClick}>Signout</button>
                 </div>
             );
