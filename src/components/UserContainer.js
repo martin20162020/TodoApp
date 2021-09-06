@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {fetchUsers} from '../redux/users/userActions'
 import { fetchTodos } from '../redux/usersTodos/userTodosActions';
+import '../styles/UserContainer.css'
 
 
 const UserContainer = ({userData, fetchUsers, userTodos, fetchTodos}) => {
@@ -26,8 +27,7 @@ const UserContainer = ({userData, fetchUsers, userTodos, fetchTodos}) => {
             <h2>See what others are posting</h2>
             <div>
                 {userTodosContainer.map((userTodo)=>{
-                    return (
-                        
+                    return (                    
                         <div className="todo" key={userTodo.id}>
                             <div className="authorAnditem">
                                 {userContainers[userTodo.id] !== undefined ? 

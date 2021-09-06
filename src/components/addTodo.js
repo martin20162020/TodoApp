@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../styles/addTodo.css'
 
 const AddToDo = ({ onChange, onClickAdd}) => {
 

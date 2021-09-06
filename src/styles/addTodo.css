@@ -1,0 +1,63 @@
+.todo-button-submit{
+    position:relative;
+    left:9rem;
+    bottom: 2.25rem;
+  }
+
+input{
+  font-size: 18px;
+  text-indent: 15px;
+  outline:none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 20rem;
+  height: 20px;
+  font-family: 'Cinzel', serif;
+  color:#4d546b;
+  box-shadow: 1px 1px 4px 2px #d3e0ee;
+  margin-top: 5rem;
+}
+
+input:hover{
+  box-shadow: 1px 1px 4px 2px #d3e0ee;
+  transition: .5s
+}
+
+@media screen and (max-width:1920px){
+
+  .todo-button-submit {
+    left: 2rem;
+    bottom:.15rem
+  }
+
+  input{
+    width: 50rem;
+  }
+}
+
+@media screen and (max-width:1750px){
+
+  input{
+    width: 45rem;
+    transition: 1s;
+    margin-left:10rem;
+  }
+}
+
+@media screen and (max-width:1300px){
+  input{
+    margin-left: 12rem;
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width:900px){
+  input{
+    margin-left:2rem;
+  }
+
+  .extra{
+    display:none;
+}
+}

@@ -1,0 +1,10 @@
+#googleButton{
+    position:absolute;
+    right:4rem;
+    width: 5rem;
+  }
+
+  .signIn{
+    text-align: right;
+    margin: 20px;
+  }

@@ -19,59 +19,6 @@ h1{
   max-width: 90px;
 }
 
-
-
-input{
-  font-size: 18px;
-  text-indent: 15px;
-  outline:none;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  width: 20rem;
-  height: 20px;
-  font-family: 'Cinzel', serif;
-  color:#4d546b;
-  box-shadow: 1px 1px 4px 2px #d3e0ee;
-  margin-top: 5rem;
-}
-
-.todo-button{
-  width: 5rem;
-  height: 2.5rem;
-  margin:0;
-  position:relative;
-  right: 9px;
-  bottom: 2px;
-  outline:none;
-  border-top-left-radius: 0px;
-  background-color: #4c536b;
-  outline:none;
-}
-
-#googleButton{
-  position:absolute;
-  right:4rem;
-  width: 5rem;
-}
-
-.todo-button-submit{
-  position:relative;
-  left:9rem;
-  bottom: 2.25rem;
-}
-
-
-input:hover{
-  box-shadow: 1px 1px 4px 2px #d3e0ee;
-  transition: .5s
-}
-
-.todo-container{
-  border-radius: 30px;
-  margin-top:2rem;
-}
-
 .todo{
   display:flex;
   justify-content:space-between;
@@ -111,6 +58,12 @@ input:hover{
   color:#d3e0ee;
 }
 
+button:hover.delete:hover .fas,
+button:hover.edit:hover .fas{
+  transition:.5s;
+  color:#4d546bd5;
+}
+
 button{
   margin: 0px 0px 0 10px;
   border-radius: 5px;
@@ -124,14 +77,6 @@ button{
   width: 6rem;
   font-family: 'Cinzel', serif;
   outline:none;
-}
-
-
-button:hover.delete:hover .fas,
-button:hover.edit:hover .fas,
-button:hover.todo-button:hover .fas{
-  transition:.5s;
-  color:#4d546bd5;
 }
 
 button:hover{
@@ -148,11 +93,6 @@ button:hover{
   opacity: .2;
 }
 
-.signIn{
-  text-align: right;
-  margin: 20px;
-}
-
 .author{
   font-size: 12px;
   color:rgb(158, 158, 158);
@@ -160,49 +100,20 @@ button:hover{
   font-weight: lighter;
 }
 
-.authorAnditem{
-  display:flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-#idButton{
-  display:inline-block;
-  
-}
-
 p{
   font-size: 20px;
   line-height: 2rem;
 }
 
-
-
 /* media queries */
 @media screen and (max-width:1920px){
-
-.todo-button-submit {
-  left: 2rem;
-  bottom:.15rem
-}
-
 .todo{
   width: 50rem;
   margin-left: 32rem;
 }
-input{
-  width: 50rem;
-}
 }
 
 @media screen and (max-width:1750px){
-
-  input{
-    width: 45rem;
-    transition: 1s;
-    margin-left:10rem;
-  }
-
   h2{
     margin-left: 6rem;
     transition: .5s
@@ -215,11 +126,8 @@ input{
     margin-bottom: 1rem;
   }
   }
+
 @media screen and (max-width:1300px){
- input{
-   margin-left: 12rem;
-   width: 30rem;
- }
  .todo{
    margin-left: 26rem;
    width: 36rem;
@@ -237,11 +145,6 @@ input{
   .todo{
     margin-left: 19rem;
     width: 30rem;
-    overflow: scroll;
-  }
-
-  .extra{
-    display:none;
   }
 
   button{
@@ -250,21 +153,15 @@ input{
     font-size: 10px;
     margin: 5px 5px;
   }
-
  }
  
-
 @media screen and (max-width:900px){
-
   h1, .name{
     font-size:20px;
     background-color: #4d546b;
     padding: .5rem;
     border-radius: .3rem;
     border-bottom-left-radius: 1rem;
-}
-input{
-  margin-left:2rem;
 }
 
 .todo{
@@ -278,27 +175,16 @@ input{
 @media screen and (max-width:950px){
   h1, .name{
     font-size:20px;
-}
-
+  }
 }
 
 @media screen and (max-width:744px){
-
   button{
       width:1.5rem;
       height:1.5rem;
   }
-  .todo-button{
-      width:1.5rem;
-      height: 1.5rem;
-      border-radius: 5px;
-      right:3rem;
-  }
+
   .todo{
     margin-left: 5rem;
   }
 }
-
-
-
-
