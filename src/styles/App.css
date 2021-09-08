@@ -58,11 +58,16 @@ h1{
   color:#d3e0ee;
 }
 
-button:hover.delete:hover .fas,
-button:hover.edit:hover .fas{
+
+
+
+button:hover.delete, 
+button:hover.edit,
+.fas:hover{
   transition:.5s;
   color:#4d546bd5;
 }
+
 
 button{
   margin: 0px 0px 0 10px;
@@ -83,6 +88,7 @@ button:hover{
   transition:.5s;
   background-color: #e2e8f0;
   color:#4d546bd5;
+  cursor:pointer
 }
 
 .completed{

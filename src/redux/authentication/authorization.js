@@ -1,42 +1,25 @@
-import { SIGN_IN, SIGN_OUT } from "./actionTypes";
+import { SIGN_IN, SIGN_OUT } from '../authentication/actionTypes';
 
-const initial_State = {
-    isSignedIn: null,
-    name: false,
-    isSignedOut: true
+const INTIAL_STATE = {
+  isSignedIn: null,
+  name: false,
 };
 
-
-export default (state = initial_State, action) =>{
-    switch (action.type){
-        case SIGN_IN:
-            return {
-                ...state, 
-                isSignedIn: true,
-                name: action.payload ,
-                isSignedOut:false,      
-            }
-        case SIGN_OUT:
-            return {
-                ...state,
-                isSignedIn: false,
-                name: '',
-                isSignedOut:true
-            }
-        default:
-            return state;
-    }
-}
-
-export const signIn = (name) =>{
-    return {
-        type: SIGN_IN,
-        payload: name
-    }
-}
-
-export const signOut = () =>{
-    return {
-        type: SIGN_OUT
-    }
-}
+export default (state = INTIAL_STATE, action) => {
+  switch (action.type) {
+    case SIGN_IN:
+      return { 
+          ...state, 
+          isSignedIn: true, 
+          name: action.payload
+        };
+    case SIGN_OUT:
+      return { 
+          ...state, 
+          isSignedIn: false, 
+          name: null
+         };
+    default:
+      return state;
+  }
+};
