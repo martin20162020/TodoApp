@@ -1,5 +1,5 @@
 #googleButton{
-    position:absolute;
+    position:fixed;
     right:4rem;
     width: 5rem;
   }

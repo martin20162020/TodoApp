@@ -1,12 +1,8 @@
-import userReducer from './users/userReducer';
 import { combineReducers } from 'redux';
-import individualReducers from './todos/individualReducer';
-import userTodosReducer from './usersTodos/userTodosReducer';
-import authReducer from './authentication/authorization';
+import authReducer from './authorization';
+import todosReducer from './todos/todosReducer';
 
 export default combineReducers({
-    todos: individualReducers,
-    users: userReducer,
-    userTodos: userTodosReducer,
+    todos: todosReducer,
     auth: authReducer
 })

@@ -1,0 +1,31 @@
+#modal .modal{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d546b;
+    height: 20rem;
+    color:white;
+    line-height: 3rem;
+    margin-right: 30rem;
+    margin-left: 30rem;
+    box-shadow: 1rem 1rem 1rem #7e8296b7;
+    border-radius: 1rem;
+    font-size:25px;
+}
+
+.todoTitle{
+    color: rgb(18, 20, 27)
+}
+
+
+#modal button{
+    color:#4d546b;
+    background-color: white;
+    margin-right: 2rem;
+}
+
+#modal .fas, .x{
+    color:#4d546b
+}
+

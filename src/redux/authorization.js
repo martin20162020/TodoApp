@@ -1,8 +1,8 @@
-import { SIGN_IN, SIGN_OUT } from '../authentication/actionTypes';
+import { SIGN_IN, SIGN_OUT } from './todos/actionTypes';
 
 const INTIAL_STATE = {
   isSignedIn: null,
-  name: false,
+  userId: false,
 };
 
 export default (state = INTIAL_STATE, action) => {
@@ -11,13 +11,13 @@ export default (state = INTIAL_STATE, action) => {
       return { 
           ...state, 
           isSignedIn: true, 
-          name: action.payload
+          userId: action.payload
         };
     case SIGN_OUT:
       return { 
           ...state, 
           isSignedIn: false, 
-          name: null
+          userId: null
          };
     default:
       return state;
