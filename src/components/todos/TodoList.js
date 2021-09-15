@@ -10,7 +10,6 @@ class TodoList extends React.Component {
   }
 
   renderAdmin(todo) {
-    console.log((this.props.todos))
     if (todo.userId === this.props.currentUserId) {
       return (
         <div>
@@ -40,6 +39,7 @@ class TodoList extends React.Component {
         <div className="todo" key={todo.id}>
           <div className="authorAndItem">
             <li className="todo-item">{todo.title}</li>
+            <h3 className="author"> Posted By: {todo.name}</h3>
             </div>
             <div>
               {this.renderAdmin(todo)}

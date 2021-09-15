@@ -14,9 +14,9 @@ import {
 
 
 export const addTodo = (formValues) => async (dispatch, getState) => {
+  const { name } = getState().auth;
   const { userId } = getState().auth;
-  const {name} = getState().auth;
-  const response = await todos.post("/todos", { ...formValues, userId, name});
+  const response = await todos.post("/todos", { ...formValues, name, userId});
 
   dispatch({ type: ADD_TODO, payload: response.data });
   history.push("/");
@@ -37,10 +37,10 @@ export const editTodo = (id, formValues) => async dispatch => {
   history.push("/");
 };
 
-export const signIn = (userId) =>{
+export const signIn = (userId, name) =>{
   return {
       type: SIGN_IN,
-      payload: userId
+      payload: userId, name
     };
 };
 

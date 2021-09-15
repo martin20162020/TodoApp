@@ -20,7 +20,6 @@ class TodoEdit extends React.Component {
     }
     return (
       <div>
-        {console.log(_.pick(this.props.todo, "title"))}
         <div>
           <i className="fas fa-calendar-check"></i>
           <span className="extra">Complete</span>

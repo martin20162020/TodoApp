@@ -7,6 +7,8 @@ const Header = () => {
         <GoogleAuth/>
         <div className="welcomePage WelcomePageContent">
             <h1 className="welcome">Welcome! Let's start creating your to do list today.</h1>
+            <div>
+            </div>
         </div>
     </div>
   );

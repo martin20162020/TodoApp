@@ -3,6 +3,7 @@ import {
   DELETE_TODO, 
   EDIT_TODO,
   FETCH_TODO_TASKS,
+  ADD_PROFILE_NAME,
   FETCH_TODO_TASK} from "./actionTypes";
 import _ from "lodash";
 
@@ -13,8 +14,9 @@ const todosReducer = (state = {}, action) => {
         return { ...state, ..._.mapKeys(action.payload, "id") };
     case FETCH_TODO_TASK:
       return { ...state, [action.payload.id]: action.payload };
-    case ADD_TODO:
-      return { ...state, [action.payload.id]: action.payload };
+      case ADD_TODO:
+      return { 
+        ...state, [action.payload.id]: action.payload };
     case EDIT_TODO:
       return { ...state, [action.payload.id]: action.payload }
     case DELETE_TODO:

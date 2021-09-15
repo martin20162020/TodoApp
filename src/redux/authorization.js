@@ -2,7 +2,8 @@ import { SIGN_IN, SIGN_OUT } from './todos/actionTypes';
 
 const INTIAL_STATE = {
   isSignedIn: null,
-  userId: false,
+  name: false,
+  userId: false
 };
 
 export default (state = INTIAL_STATE, action) => {
@@ -11,13 +12,14 @@ export default (state = INTIAL_STATE, action) => {
       return { 
           ...state, 
           isSignedIn: true, 
-          userId: action.payload
+          name: action.payload.name,
+          userId: action.payload.userId
         };
     case SIGN_OUT:
       return { 
           ...state, 
           isSignedIn: false, 
-          userId: null
+          profile: null
          };
     default:
       return state;
